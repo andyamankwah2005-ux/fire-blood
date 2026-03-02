@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fire Blood Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="#home" class="logo">Fire<span>Blood</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section id="home">
+    <div class="hero-text">
+      <h1>IGNITE<br/><span>YOUR</span><br/>FIRE</h1>
+      <p>Push your limits. Transform your body. Join the Fire Blood community and unlock your true potential.</p>
+      <a href="#services" class="hero-cta">Explore Services</a>
+    </div>
+    <div class="login-card">
+      <h2>Member Login</h2>
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username"/>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password"/>
+      <button class="btn-login">Log In</button>
+      <span class="signup-link">Don't have an account? <a href="#">Sign Up Here</a></span>
+    </div>
+  </section>
+
+  <section id="services">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img class="service-img" src="images/yoga1.jpg" alt="Yoga"/>
+        <div class="service-info">
+          <h3>Yoga</h3>
+          <p>Find balance, flexibility, and inner peace with our expert-led yoga sessions for all levels.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img class="service-img" src="images/trainer.jpg" alt="Personal Training"/>
+        <div class="service-info">
+          <h3>Personal Trainer</h3>
+          <p>One-on-one coaching tailored to your goals. Our certified trainers push you to your limits.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img class="service-img" src="images/protein.jpg" alt="Protein Shake"/>
+        <div class="service-info">
+          <h3>Free Protein Shake</h3>
+          <p>Complimentary protein shake with every session to fuel your recovery and growth.</p>
+          <span class="badge">Free with membership</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-grid">
+      <div>
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">About Us</h2>
+        <div class="about-text">
+          <p>Fire Blood Gym was built for those who refuse to settle. We are more than a gym — we are a community of athletes, beginners, and warriors who share one common goal: becoming their best selves.</p>
+          <p>Our state-of-the-art facility, expert coaches, and inclusive atmosphere make us the premier destination for fitness in our community.</p>
+        </div>
+      </div>
+      <div class="about-right">
+        <img src="images/gym2.jpg" alt="Our Gym" class="about-img"/>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Active Members</div></div>
+          <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Expert Trainers</div></div>
+          <div class="stat"><div class="stat-num">8</div><div class="stat-label">Years Running</div></div>
+          <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Gym Access</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Reach Us Directly</h3>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><p>Phone Number</p><a href="tel:+233697545954">+233 697 545 954</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div><p>Email Address</p><a href="mailto:Andyamankwah2005@gmail.com">Andyamankwah2005@gmail.com</a></div>
+        </div>
+        <img src="images/trainer2.jpg" alt="Trainer" class="contact-img"/>
+      </div>
+      <form class="contact-form" onsubmit="return false;">
+        <input type="text" placeholder="Your Name"/>
+        <input type="email" placeholder="Your Email"/>
+        <textarea placeholder="Your Message"></textarea>
+        <button class="btn-send">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 <span>Fire Blood Gym</span>. All rights reserved.
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => navLinks.classList.remove('open'))
+    );
+  </script>
+
+</body>
+</html>
